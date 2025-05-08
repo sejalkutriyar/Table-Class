@@ -1,0 +1,171 @@
+/* Centering the container */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #001f1f, #004d4d); /* Enhanced background gradient */
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+/* Styling the container */
+div {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #00a3a3, #005f5f);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: popIn 0.8s ease-in-out;
+}
+
+div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Styling the input field */
+input[type="number"] {
+    width: 300px;
+    padding: 15px;
+    border: 2px solid #00cccc;
+    border-radius: 10px;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 10px #00cccc;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Styling the buttons */
+button {
+    margin: 10px;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #00cccc, #004d4d);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #004d4d, #002626);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+/* Styling the title */
+h1 {
+    font-size: 36px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+    margin-bottom: 20px;
+}
+
+/* Styling the multiplier output */
+p {
+    font-size: 24px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    border-radius: 8px;
+    display: inline-block;
+    animation: slideIn 0.5s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    div {
+        padding: 20px;
+    }
+
+    input[type="number"] {
+        width: 220px;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    input[type="number"] {
+        width: 180px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
